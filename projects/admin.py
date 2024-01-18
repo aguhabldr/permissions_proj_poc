@@ -3,7 +3,7 @@ from .models import Project
 
 
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('name','description')
+    list_display = ('name','description','author')
     search_fields = ('name',)
 
 admin.site.register(Project, ProjectAdmin)

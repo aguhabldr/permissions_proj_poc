@@ -16,4 +16,6 @@ class BaseModel(models.Model):
 class Project(BaseModel):
     name = models.CharField(max_length=50)
     description = models.TextField()
+    author = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
+    
 
